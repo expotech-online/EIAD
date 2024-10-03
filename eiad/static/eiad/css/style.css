@@ -528,14 +528,14 @@ ul {
   text-transform: capitalize;
   background-size: 200% auto;
   border: 1px solid transparent;
-  box-shadow: 0px 12px 20px 0px rgba(19, 58, 129, 0.15);
+  box-shadow: 0px 12px 20px 0px rgba(31, 102, 235, 0.15);
 }
 
 /* line 38, E:/172 Etrain Education/172_Etrain_Education_html/sass/_button.scss */
 .btn_1:hover {
   color: #fff !important;
   background-position: right center;
-  box-shadow: 0px 10px 30px 0px rgba(193, 34, 10, 0.2);
+  box-shadow: 0px 10px 30px 0px rgba(21, 5, 168, 0.2);
 }
 
 @media (max-width: 576px) {
@@ -1214,12 +1214,12 @@ ul {
 
 /* line 537, E:/172 Etrain Education/172_Etrain_Education_html/sass/_blog.scss */
 .blog_details a {
-  color: #ff8b23;
+  color: #1f4ea5;
 }
 
 /* line 540, E:/172 Etrain Education/172_Etrain_Education_html/sass/_blog.scss */
 .blog_details a:hover {
-  color: #ff663b !important;
+  color: #221fce !important;
 }
 
 /* line 545, E:/172 Etrain Education/172_Etrain_Education_html/sass/_blog.scss */
@@ -1287,7 +1287,7 @@ ul {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #ff7e5f;
+  background-color: #1a18b3;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -3167,7 +3167,7 @@ ul {
 
 /* line 145, E:/172 Etrain Education/172_Etrain_Education_html/sass/_feature_part.scss */
 .feature_part .single_feature:hover .single_feature_part {
-  border: 1px solid #ff663b;
+  border: 1px solid #160ac5;
 }
 
 /* line 148, E:/172 Etrain Education/172_Etrain_Education_html/sass/_feature_part.scss */
@@ -6469,7 +6469,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1, E:/172 Etrain Education/172_Etrain_Education_html/sass/_breadcrumb.scss */
 .breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
+  background-image: url("../img/Hero.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6899,17 +6899,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /*# sourceMappingURL=style.css.map */
 
-
-
-
 .logo-section {
-  margin-top: 0; /* No margin above */
-  padding: 20px 0; /* Adjust padding for spacing below the banner */
+  margin-top: 0; 
+  padding: 20px 0; 
 }
 
 .logo-section img {
-  max-width: 80px; /* Consistent logo size */
-  margin: 0 15px; /* Horizontal spacing between logos */
+  max-width: 80px; 
+  margin: 0 15px; 
 }
 
 .test{
@@ -6918,16 +6915,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title_feature_text {
-  margin-bottom: 20px; /* Add margin to separate from the next element */
-  clear: both; /* Clear floats to avoid overlap */
+  margin-bottom: 20px; 
+  clear: both; 
 }
 
 .title_feature_text h2 {
-  white-space: nowrap; /* Keeps the title in a single line */
+  white-space: nowrap; 
 }
 .title_feature_text p {
-  white-space: nowrap;  /* Prevents wrapping */
-  text-overflow: ellipsis; /* Optional: Adds ellipsis if the text is too long */
+  white-space: nowrap;  
+  text-overflow: ellipsis; 
 }
 
 
@@ -6936,78 +6933,78 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial_slider {
   display: flex;
-  align-items: flex-start; /* Aligns the items at the start (top) */
+  align-items: flex-start; 
 }
 
 .testimonial_slider_img {
-  flex: 0 0 30%; /* Fixed width for images */
+  flex: 0 0 30%; 
   max-width: 30%;
 }
 
 .card {
-  flex: 1; /* Make card take the remaining width */
-  margin-left: 20px; /* Space between image and card */
-  border: none; /* Remove default border */
-  border-radius: 8px; /* Optional: round corners */
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  flex: 1;
+  margin-left: 20px; 
+  border: none; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .card-body {
-  padding: 20px; /* Space inside the card */
+  padding: 20px; 
 }
 
 .img-fluid {
-  border-radius: 8px; /* Optional: round image corners */
-  overflow: hidden; /* Hide overflow */
+  border-radius: 8px; 
+  overflow: hidden; 
 }
 
 
 
 .owl-nav {
-    position: fixed; /* Position fixed to align to viewport */
-    top: 10px; /* Distance from the top */
-    right: 0; /* Align to right edge */
-    z-index: 10; /* Bring on top */
+    position: fixed; 
+    top: 10px; 
+    right: 0;
+    z-index: 10; 
 }
 
 .owl-nav button {
-    background-color: transparent; /* Transparent background */
-    border: none; /* No borders */
-    font-size: 24px; /* Size of icons */
-    color: #19a80c; /* Arrow color */
-    cursor: pointer; /* Pointer cursor */
-    margin-left: 5px; /* Space between buttons */
+    background-color: transparent; 
+    border: none; 
+    font-size: 24px; 
+    color: #19a80c; 
+    cursor: pointer;
+    margin-left: 5px; 
 }
 
 .owl-nav button:hover {
-    color: #007bff; /* Color on hover */
+    color: #007bff; 
 }
 
 .social_icon_contact {
-  display: flex; /* Align icons horizontally */
-  gap: 15px; /* Space between icons */
+  display: flex; 
+  gap: 15px; 
 }
 
 .social_icon_contact a {
-  font-size: 24px; /* Set icon size */
-  transition: transform 0.3s ease; /* Smooth scaling on hover */
+  font-size: 24px; 
+  transition: transform 0.3s ease; 
 }
 
 /* Specific colors for each icon */
 .social_icon_contact a:nth-child(1) {
-  color: #3b5998; /* Facebook color */
+  color: #3b5998; 
 }
 
 .social_icon_contact a:nth-child(2) {
-  color: #0077b5; /* LinkedIn color */
+  color: #0077b5;
 }
 
 .social_icon_contact a:nth-child(3) {
-  color: #ff0000; /* YouTube color */
+  color: #ff0000; 
 }
 
 .social_icon_contact a:nth-child(4) {
-  color: #1da1f2; /* X (formerly Twitter) color */
+  color: #1da1f2; 
 }
 
 /* Hover effect */
@@ -7024,10 +7021,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .custom-contact-section {
-  padding-top: 0px; /* Adjust as needed */
-  padding-bottom: 0px; /* Adjust as needed */
+  padding-top: 0px; 
+  padding-bottom: 0px; 
 }
-
 
 /* Courses Section */
 
@@ -7109,16 +7105,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-enroll-btn {
   font-size: 12px;
-  padding: 5px 10px; /* Smaller button */
+  padding: 5px 10px;
   border-radius: 20px;
 }
 
 .course-price-overlay {
   position: absolute;
-  bottom: 10px; /* Adjusted positioning */
+  bottom: 10px;
   left: 110px;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px; /* Smaller padding for compact design */
+  padding: 5px 10px; 
   border-radius: 10px;
   text-align: center;
   margin-left: 30px;
@@ -7136,9 +7132,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #4b4b4b;
   font-size: 12px; 
 }
-
-
-
 
 /* Training Section */
 .course-training-section {
@@ -7167,18 +7160,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
 /* Adjusting margins and positioning for individual buttons */
 .course-categories .btn {
-  margin: 10px;  /* Space between the buttons */
-  padding: 10px 20px;  /* Padding for larger buttons */
-  transition: all 0.3s ease; /* Smooth hover effect */
+  margin: 10px; 
+  padding: 10px 20px;  
+  transition: all 0.3s ease; 
 }
 
 /* Styling for the primary button */
 .course-categories .btn-primary {
-  background-color: #3c94f1; /* Default Bootstrap primary color */
+  background-color: #3c94f1; 
   border-color: #007bff;
 }
 
@@ -7193,8 +7184,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #007bff;
   color: white;
 }
-
-
 
 .stats {
   display: flex;
@@ -7213,13 +7202,6 @@ margin-top: 30px;
   color: #555;
 }
 
-
-
-
-
-
-
-
 /* Sidebar Container */
 .course-sidebar {
   padding: 40px 30px;
@@ -7233,7 +7215,7 @@ margin-top: 30px;
   justify-content: space-between;
   align-items: center;
   min-height: 400px; /* Set a minimum height */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Course Title */
@@ -7245,10 +7227,10 @@ margin-top: 30px;
 
 /* Adjust list styling */
 .course-sidebar-item-list {
-  list-style-type: disc; /* Bullet list style */
-  padding-left: 20px; /* Space for the bullet (left padding) */
-  text-align: left; /* Align the text to the left */
-  margin: 0; /* Reset margin */
+  list-style-type: disc;
+  padding-left: 20px; 
+  text-align: left; 
+  margin: 0;
 }
 
 /* Style individual items */
@@ -7304,32 +7286,27 @@ margin-top: 30px;
   text-decoration: none;
   font-size: 14px;
   border: 1px solid #5a69f5;
-  padding: 6px 12px; /* Adjust padding for consistent size */
+  padding: 6px 12px; 
   transition: background-color 0.3s, color 0.3s;
   border-radius: 5px;
 }
 
 /* Add hover effects for buttons */
 .course-register-btn:hover, .course-promo-code-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  color: white; /* Optional change on hover */
+  background-color: #0056b3; 
 }
-
 
 
 .single-comment {
-  margin-right: 15px; /* Space between cards */
+  margin-right: 15px; 
 }
 
 
-
-/* Container background and padding */
 .content {
   padding: 20px;
   border-radius: 5px;
 }
 
-/* Styling for each course item */
 .course-item {
   padding: 10px 0;
   border-bottom: 1px solid #ddd; 
@@ -7337,9 +7314,9 @@ margin-top: 30px;
 
 
 .course-details {
-  display: none; /* Initially hidden */
-  padding: 10px 0; /* Optional padding for details */
-  color: blue; /* Color for details */
+  display: none; 
+  padding: 10px 0; 
+  color: blue; 
 }
 
 
@@ -7351,14 +7328,13 @@ margin-top: 30px;
   text-align: center;
   background-color: white;
   border-radius: 50%;
-  color: #007bff; /* Blue color */
+  color: #007bff; 
   font-size: 20px;
   transition: transform 0.3s ease;
   cursor: pointer;
   font-weight: bold;
 }
 
-/* Rotate arrow on toggle */
 .rotate-arrow {
   transform: rotate(90deg);
 }
@@ -7366,23 +7342,23 @@ margin-top: 30px;
 
 
 .course-outline {
-  width: 500px; /* Fixed width for the course outline */
-  margin: 20px auto; /* Center the outline with margin */
+  width: 500px; 
+  margin: 20px auto; 
 }
 
 .course_list {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding from the list */
+  list-style-type: none; 
+  padding: 0; 
 }
 
 .course-item {
-  padding: 10px 0; /* Padding for the course items */
-  cursor: pointer; /* Change cursor to pointer for interactivity */
+  padding: 10px 0; 
+  cursor: pointer; 
 }
 
 
 .course-details {
-  padding-left: 20px; /* Indent details for better visibility */
+  padding-left: 20px; 
 }
 
 
@@ -7463,7 +7439,6 @@ margin-top: 30px;
   margin-right: 8px;
 }
 
-/* Ensure no gutter between image and text in card */
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -7472,11 +7447,11 @@ margin-top: 30px;
 
 /* Styling for the logo section inside the buttons area */
 .logo-group {
-  margin-top: 20px; /* Adds spacing between buttons and logos */
+  margin-top: 20px; 
 }
 
 .logo-group .logo-img {
-  max-height: 50px; /* Ensures logos are uniform in size */
+  max-height: 50px;
   margin-right: 15px;
   opacity: 0.9;
   transition: opacity 0.3s ease;
@@ -7490,4 +7465,11 @@ margin-top: 30px;
 .logo-group .row {
   display: flex;
   align-items: center;
+}
+
+.icon {
+  width: 20px; 
+  height: 20px; 
+  margin-right: 8px; 
+  vertical-align: middle; 
 }

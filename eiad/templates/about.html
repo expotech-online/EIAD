@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Etrain</title>
+    <title>EIAD</title>
     <link rel="icon" href="img/favicon.png">
     {% load static %}
     
@@ -43,31 +43,28 @@
                         <div class="collapse navbar-collapse main-menu-item justify-content-end" id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'index' %}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'about' %}">About us</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'about' %}">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'course' %}">The Programs</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'course' %}">The Programs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'our_campus' %}">Our Campuses</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'our_campus' %}">Our Campuses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'blog' %}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'contact' %}">Contact</a>
                                 </li>
                                 <li class="d-none d-lg-block">
                                     <a class="btn_1" href="#" style="background-color: blue; color: white; padding: 10px 20px; border-radius: 5px;">Get a Quote</a>
                                 </li>
                             </ul>
-                        </div>
-                        
-                        
-                        
+                        </div>  
                     </nav>
                 </div>
             </div>
@@ -93,12 +90,12 @@
     <!-- breadcrumb start-->
 
  <!-- learning part start-->
- <section class="learning_part"  style="margin-top: 50px;">
+ <section class="learning_part"style="margin-bottom: -50px;">
     <div class="container">
         <div class="row align-items-sm-center align-items-lg-stretch">
-            <div class="col-md-7 col-lg-7">
-                <div class="learning_img">
-                    <img src="{% static 'eiad/img/learning_img.png' %}" alt="about imggg">
+            <div class="col-md-7 col-lg-7 mt-9">
+                <div class="learning_img" style="margin-bottom:-200px;">
+                    <img src="{% static 'eiad/img/about_1.png' %}" alt="about img">
                 </div>
             </div>
             <div class="col-md-5 col-lg-5">
@@ -116,7 +113,7 @@
 
 
 
-<section class="advance_feature learning_part"  style="margin-top: -200px;">
+<section class="advance_feature learning_part" style="margin-top:-100px;">
     <div class="container">
         <div class="row align-items-sm-center align-items-xl-stretch">
             <div class="col-md-6 col-lg-6">
@@ -131,7 +128,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="learning_img">
-                    <img src="{% static 'eiad/img/advance_feature_img.png' %}" alt="our values pic">
+                    <img src="{% static 'eiad/img/about_2.png' %}" alt="our values pic">
                 </div>
             </div>
         </div>
@@ -140,10 +137,8 @@
 <!-- learning part end-->
 
 
-<!-- Our Team-->
-
 <!-- Our Team -->
-<section class="advance_feature learning_part" style="margin-bottom: 0;">
+<section class="advance_feature learning_part" style="margin-top: -100px;" >
     <div class="container">
         <div class="col-md-5 col-lg-5">
             <div class="learning_member_text">
@@ -188,7 +183,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Custom Navigation Arrows -->
            
         </div>
     </div>
@@ -203,8 +197,7 @@
         var $owl = $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
-            nav: false, // Disable default nav to use custom arrows
-            dots: false, // Disable dots if you want only arrows
+            nav: false, 
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
@@ -231,22 +224,6 @@
         });
     });
 </script>
-
-<!-- Custom CSS for positioning arrows -->
-
-
-<!-- Custom CSS for positioning arrows -->
-
-
-
-
-    <!-- upcoming_event part start-->
-
-
-
-
-
-
 <!-- Testimonial Section -->
 <section class="testimonial_part">
     <div class="container-fluid">

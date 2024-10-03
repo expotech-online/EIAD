@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Etrain</title>
+    <title>EIAD</title>
     <link rel="icon" href="img/favicon.png">
     {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -45,31 +45,25 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'index' %}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'about' %}">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="cource.html">Courses</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'course' %}">The Programs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                    </div>
+                                    <a class="nav-link" style="color: white;" href="{% url 'our_campus' %}">Our Campuses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="{% url 'contact' %}">Contact</a>
                                 </li>
                                 <li class="d-none d-lg-block">
-                                    <a class="btn_1" href="#">Get a Quote</a>
+                                    <a class="btn_1" href="#" style="background-color: blue; color: white; padding: 10px 20px; border-radius: 5px;">Get a Quote</a>
                                 </li>
                             </ul>
                         </div>
@@ -95,8 +89,6 @@
             </div>
         </div>
     </section>
-    <!-- breadcrumb start-->
-
 
     <!--================Blog Area =================-->
     <section class="blog_area section_padding">
@@ -117,10 +109,11 @@
     
                             <div class="blog_details">
                                 <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
+                                    <h2>AI and Marketing: A revolutionary duo!
+                                    </h2>
                                 </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <p>Artificial intelligence (AI) is no longer science fiction; it is a reality that is redefining marketing!
+                                </p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
                                     <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
@@ -161,7 +154,7 @@
     
                             <div class="blog_details">
                                 <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
+                                    <h2>Master Prompt Engineering: Your Superpower!</h2>
                                 </a>
                                 <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                     he earth it first without heaven in place seed it second morning saying.</p>

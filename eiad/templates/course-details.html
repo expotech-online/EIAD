@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Etrain</title>
+    <title>EIAD</title>
     <link rel="icon" href="img/favicon.png">
     {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="learning_img">
-                        <img src="{% static 'eiad/img/banner.png' %}" alt="our values pic" style="margin-left: 130px;">
+                        <img src="{% static 'eiad/img/about.png' %}" alt="our values pic" style="margin-left: 130px;">
                     </div>
                 </div>
             </div>
@@ -117,9 +117,6 @@
                             <br>
                             <br>
                         </div>
-
-
-                        
                         <h4 class="title">Course Outline</h4>
                         <div class="content" style="background-color: #f0f0f0; padding: 20px;">
                             <ul class="course_list" style="font-weight: bold;">
@@ -147,12 +144,9 @@
                                     <p>Deep dive into HTML attributes, forms, and tables.</p>
                                 </div>
                             </ul>
-                        </div>
-                        
-                        
+                        </div>       
                     </div>
                 </div>
-
                 <div class="col-lg-4 right-contents">
                     <div class="course-sidebar">
                         <h3 class="course-sidebar-title">This course includes:</h3>
@@ -288,22 +282,10 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
-                
-
-
-
-
-
-                    </div>
+                </div>   
+               </div>
                 </div>
             </div>
-
-
-
-
-
-
         </div>
     </section>
     <!--================ End Course Details Area =================-->
@@ -403,18 +385,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       <script src="{% static 'eiad/js/custom.js' %}"></script>
 
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
        function toggleDetails(element) {
-    const details = element.parentElement.nextElementSibling; // Get the next sibling (course-details)
+    const details = element.parentElement.nextElementSibling; 
     if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block"; // Show details
-        element.innerHTML = '&#x2190;'; // Change arrow to point left
-    } else {
-        details.style.display = "none"; // Hide details
-        element.innerHTML = '&#x2192;'; // Change arrow to point right
+        details.style.display = "block"; 
+        element.innerHTML = '&#x2190;'; 
+        details.style.display = "none";
+        element.innerHTML = '&#x2192;'; 
     }
 }
     </script>
@@ -436,8 +416,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     }, 2000);
 });
         </script>
-
-
 
 
 </body>
