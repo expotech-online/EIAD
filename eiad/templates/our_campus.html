@@ -45,27 +45,28 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" style="color: white;" href="">Home</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'index' %}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="about">About us</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'about' %}">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="cource.html">The Programs</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'course' %}">The Programs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="our_campus">Our Campuses</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'our_campus' %}">Our Campuses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" style="color: white;" href="blog">Blog</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'blog' %}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="contact">Contact</a>
+                                    <a class="nav-link" style="color: white;" href="{% url 'contact' %}">Contact</a>
                                 </li>
                                 <li class="d-none d-lg-block">
                                     <a class="btn_1" href="#" style="background-color: blue; color: white; padding: 10px 20px; border-radius: 5px;">Get a Quote</a>
                                 </li>
                             </ul>
+                            
                         </div>
                     </nav>
                 </div>
