@@ -83,3 +83,14 @@ SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'eiad/static')
 SASS_PROCESSOR_INCLUDE_DIRS = (
     os.path.join(BASE_DIR, 'eiad/static/sass'),
 )
+
+
+# Email config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'majidsakr86@gmail.com'
+EMAIL_HOST_PASSWORD = 'woyw ilce nibj ufde'
+ADMIN_EMAIL = 'majidsakr86@gmail.com'
