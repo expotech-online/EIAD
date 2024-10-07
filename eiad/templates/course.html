@@ -81,7 +81,7 @@
     <section class="advance_feature learning_part">
         <div class="container">
             <div class="row align-items-sm-center align-items-xl-stretch">
-                <div class="col-md-6 col-lg-6">
+                <div class="col-md-6 col-lg-6" style="margin-top: 130px;">
                     <div class="learning_member_text">
                         <h3>Learn a new skill evey day, any time, any where.
                            </h3>
@@ -126,50 +126,68 @@
         </div>
     </div>
 
-    <!-- Courses Section -->
-    <section class="container course-section">
-        <div class="row">
-            <!-- Course 1 -->
-            <div class="col-md-12 mb-4 mt-11">
-                <div class="card course-card d-flex flex-row">
-                    <img src="{% static 'eiad/img/course-11.png' %}" class="course-card-img" alt="Specialized AI Technician">
-                    <div class="card-body course-card-body">
-                        <div class="course-date">1 - 28 July 2022</div>
-                        <h5 class="course-card-title">Specialized AI Technician.</h5>
-                        <p class="course-card-text">An AI Specialist Technician is responsible for maintaining and troubleshooting AI systems, ensuring they function effectively and efficiently...</p>
-                        <div class="course-meta">
-                            <span class="course-students"><i class="fas fa-users"></i> 40 students</span>
-                            <a href="#" class="btn btn-primary course-enroll-btn">Registration</a>
+<!-- Courses Section -->
+<section class="container course-section">
+    <div class="row justify-content-end"> <!-- Use justify-content-end to align items to the right -->
+        <!-- Course 1 -->
+        <div class="col-md-12 mb-4 mt-11"> <!-- Full width on medium and larger screens -->
+            <div class="card course-card d-flex flex-row">
+                <img src="{% static 'eiad/img/course-11.png' %}" class="course-card-img" alt="Specialized AI Technician">
+                <div class="card-body course-card-body">
+                    <div class="course-date">1 - 28 July 2022</div>
+                    <br>
+                    <h5 class="course-card-title">Specialized AI Technician.</h5>
+                    <p class="course-card-text">An AI Specialist Technician is responsible for maintaining and troubleshooting AI systems, ensuring they function effectively and efficiently...</p>
+                    <div class="course-meta d-flex justify-content-between align-items-center">
+                        <!-- Avatars Container for Course 2 -->
+                        <div class="avatars-container d-flex align-items-center">
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_1.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_2.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_3.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_2.png' %}" alt="Student 1"></div>
+                            <strong class="students-count" style="margin-left: 20px;"> +100 students</strong>
                         </div>
                     </div>
-                    <div class="course-price-overlay">
-                        <span class="course-price">$380</span>
-                        <span class="course-price-discount">$500</span>
-                    </div>
-                </div>
-            </div>
+                    <a href="#" class="btn btn-primary course-enroll-btn" style="margin-top: 30px; margin-left: 150px;">Registration</a>
 
-            <!-- Course 2 -->
-            <div class="col-md-12 mb-2 mt-3">
-                <div class="card course-card d-flex flex-row">
-                    <img src="{% static 'eiad/img/course-2.png' %}" class="course-card-img" alt="Technician in Marketing & AI">
-                    <div class="card-body course-card-body">
-                        <div class="course-date">1 - 28 July 2022</div>
-                        <h5 class="course-card-title">Technician Specialized in Marketing & AI.</h5>
-                        <p class="course-card-text">A Specialized Technician in Marketing & AI combines expertise in artificial intelligence with marketing strategies to enhance business outcomes...</p>
-                        <div class="course-meta">
-                            <span class="course-students"><i class="fas fa-users"></i> 32 students</span>
-                            <a href="#" class="btn btn-primary course-enroll-btn">Registration</a>
-                        </div>
-                    </div>
-                    <div class="course-price-overlay">
-                        <span class="course-price">$380</span>
-                        <span class="course-price-discount">$500</span>
-                    </div>
+                </div>
+                <div class="course-price-overlay">
+                    <span class="course-price">$380</span>
+                    <span class="course-price-discount">$500</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Course 2 -->
+        <div class="col-md-12 mb-2 mt-3"> <!-- Full width on medium and larger screens -->
+            <div class="card course-card d-flex flex-row">
+                <img src="{% static 'eiad/img/course-2.png' %}" class="course-card-img" alt="Technician in Marketing & AI">
+                <div class="card-body course-card-body">
+                    <div class="course-date">1 - 28 July 2022</div>
+                    <br>
+                    <h5 class="course-card-title">Technician Specialized in Marketing & AI.</h5>
+                    <p class="course-card-text">A Specialized Technician in Marketing & AI combines expertise in artificial intelligence with marketing strategies to enhance business outcomes...</p>
+                    <div class="course-meta d-flex justify-content-between align-items-center">
+                        <!-- Avatars Container for Course 2 -->
+                        <div class="avatars-container d-flex align-items-center">
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_1.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_2.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_3.png' %}" alt="Student 1"></div>
+                            <div class="avatar"><img src="{% static 'eiad/img/icon/author_2.png' %}" alt="Student 1"></div>
+                            <strong class="students-count" style="margin-left: 20px;"> +40 students</strong>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary course-enroll-btn" style="margin-top: 30px; margin-left: 150px;">Registration</a>
+
+                </div>
+                <div class="course-price-overlay">
+                    <span class="course-price">$380</span>
+                    <span class="course-price-discount">$500</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Training Section -->
