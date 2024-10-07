@@ -29,7 +29,7 @@ def contact(request):
 
             user_message = f"Hello {contact_data.name},\n\nThank you for contacting us! We have received your message and will get back to you soon.\n\nBest regards,\nYour Company Name"
             send_mail(
-                "Thank you for your message!",
+                "EIAD School",
                 user_message,
                 settings.EMAIL_HOST_USER,
                 [contact_data.email],
