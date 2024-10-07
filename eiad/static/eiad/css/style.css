@@ -7494,3 +7494,18 @@ margin-top: 30px;
   height: 100%;
   object-fit: cover;
 }
+
+
+/* Change background color of the collapsed menu */
+@media (max-width: 991.98px) { /* Adjust the breakpoint as needed */
+  #navbarSupportedContent {
+    background: linear-gradient(to left, #6554fd 0%, #51aeec 51%, #958aff 100%);
+  }
+
+  /* Optional: Change the text color in the collapsed menu to black if needed */
+  #navbarSupportedContent .nav-link {
+      color: black; /* Adjust text color if needed */
+  }
+}
+
+/* Keep the main navbar background color intact */
