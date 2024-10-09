@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_section %}
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{% static 'eiad/img/logo.jpg' %}" alt="logo" class="img-fluid" style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'courses' %}">The Programs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'our_campus' %}">Our Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'archive' %}">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                            </li>
+                            <li class="d-none d-lg-block">
+                                <a class="btn_1 btn btn-primary" href="{% url 'contact' %}">Get a Quote</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block hero_section %}
+<section class="advance_feature learning_part mt-5" style="margin-top:100px !important;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="learning_member_text">
+                    <h1>{{ course.title }}</h1>
+                    <p>{{ course.description|truncatewords:30 }}</p>
+                    <a href="{% url 'register_course' course.id %}" class="btn_1 btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+                <div class="learning_img">
+                    <img src="{{ course.image.url }}" alt="Course image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="course_details_area section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 course_details_left">
+                <div class="main_image">
+                    <img class="img-fluid" src="{{ course.image.url }}" alt="{{ course.title }}">
+                </div>
+                <div class="content_wrapper">
+                    <h4 class="title_top">About Course</h4>
+                    <div class="content text-dark">
+                        <p>{{ course.description }}</p>
+                    </div>
+
+                    <!-- Dynamic Course Outline Section -->
+                    <h4 class="title">Course Outline</h4>
+                    <div class="content bg-light p-3">
+                        <ul class="course_list font-weight-bold">
+                            {% for outline_item in course.course_outline.splitlines %}
+                                <li class="course-item d-flex justify-content-between align-items-center">
+                                    <p class="text-dark">{{ outline_item }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>       
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 right-contents">
+                <div class="course-sidebar">
+                    <h3 class="course-sidebar-title">This course includes:</h3>
+                    <div class="course-sidebar-list">
+                        <ul class="course-sidebar-item-list">
+                            <!-- Dynamically load "this course includes" list -->
+                            {% for include_item in course.includes.splitlines %}
+                                <li class="course-sidebar-item">{{ include_item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="course-price d-flex justify-content-between">
+                        <span class="course-price-current">${{ course.price }}</span>
+                        {% if course.discount_price %}
+                        <span class="course-price-discount text-danger">${{ course.discount_price }}</span>
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'register_course' course.id %}" class="course-register-btn btn btn-primary w-100">Register</a>
+                </div>
+                <a href="#" class="course-promo-code-btn btn btn-secondary w-100 mt-2">Promotional Code</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="{% static 'eiad/js/jquery-1.12.1.min.js' %}"></script>
+<script src="{% static 'eiad/js/bootstrap.min.js' %}"></script>
+<script>
+    function toggleDetails(element) {
+        const details = element.parentElement.nextElementSibling;
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+            element.innerHTML = '&#x2190;';
+        } else {
+            details.style.display = "none";
+            element.innerHTML = '&#x2192;';
+        }
+    }
+</script>
+{% endblock %}

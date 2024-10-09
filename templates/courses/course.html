@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_section %}
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static 'eiad/img/logo.jpg' %}" alt="logo" style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'courses' %}">The Programs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'our_campus' %}">Our Campany</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'archive' %}">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                            </li>
+                            <li class="d-none d-lg-block">
+                                <a class="btn_1" href="{% url 'contact' %}" style="background-color: blue; color: white; padding: 10px 20px; border-radius: 5px;">Get a Quote</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}
+
+
+{% block hero_section %}
+
+<section class="advance_feature learning_part">
+    <div class="container">
+        <div class="row align-items-sm-center align-items-xl-stretch">
+            <div class="col-md-6 col-lg-6" style="margin-top: 130px;">
+                <div class="learning_member_text">
+                    <h3>Learn a new skill every day, any time, anywhere.</h3>
+                    <p>Courses covering all technology areas allow you to learn and explore new opportunities. Learn from industry experts and land your dream job.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="learning_img">
+                    <img class="mt-lg-5" src="{% static 'eiad/img/about.png' %}" alt="our values pic" style="margin-left:150px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+<section style="margin-top: -100px;">
+    <div class="container text-center mt-5">
+        <h2 class="text-center mb-4">Course</h2>
+        <div class="course-categories">
+            <!-- Button for all programs -->
+            <a href="?category=">
+                <button type="button" class="btn {% if not request.GET.category %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                    All programs
+                </button>
+            </a>
+
+            <!-- Loop through categories to create buttons -->
+            {% for category in categories %}
+            <a href="?category={{ category.name }}">
+                <button type="button" class="btn {% if request.GET.category == category.name %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                    {{ category.name }}
+                </button>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="container course-section">
+        <div class="row justify-content-end">
+            {% for course in courses %}
+            <div class="col-md-12 mb-4 mt-11">
+                <div class="card course-card d-flex flex-row">
+                    <img src="{{ course.image.url }}" class="course-card-img" alt="{{ course.title }}">
+                    <div class="card-body course-card-body">
+                        <div class="course-date">{{ course.start_date }} - {{ course.end_date }}</div>
+                        <br>
+                        <a href="{% url 'course_detail' course.id %}"><h5 class="course-card-title">{{ course.title }}</h5></a>
+                        <p class="course-card-text">{{ course.description|truncatewords:20 }}</p>
+                        <div class="course-meta d-flex justify-content-between align-items-center">
+                            <strong class="students-count" style="margin-left: 20px;">+100 students</strong>
+                        </div>
+                        <a href="{% url 'register_course' course.id %}" class="btn btn-primary course-enroll-btn" style="margin-top: 30px; margin-left: 150px;">Registration</a>
+                    </div>
+                    <div class="course-price-overlay">
+                        <span class="course-price">${{ course.price }}</span>
+                        {% if course.discount_price %}
+                        <span class="course-price-discount">${{ course.discount_price }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section class="container mt-5 mb-5">
+        <h2 class="text-center mb-5">Training</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'eiad/img/pana.png' %}" alt="Training" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <h3 class="mb-4 course-training-title">Staff Training</h3>
+                    <li class="course-training-item">
+                        <img src="{% static 'eiad/img/icon/Group 72.svg' %}" alt="Check Icon" class="icon">
+                        Integrating AI into teaching for personalized learning.
+                    </li>
+                    <li class="course-training-item">
+                        <img src="{% static 'eiad/img/icon/Group 73.svg' %}" alt="Check Icon" class="icon">
+                        Using AI to make data-driven decisions to improve student outcomes.
+                    </li>
+                    <li class="course-training-item">
+                        <img src="{% static 'eiad/img/icon/users2.svg' %}" alt="Check Icon" class="icon">
+                        Leveraging AI-powered administrative tools to improve efficiency.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}
