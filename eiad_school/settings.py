@@ -14,7 +14,9 @@ SECRET_KEY = 'django-insecure-)lz@ke5h7s@y(maye@o20bp!zwxsl$pg_y3b2k4ll8gmvz7r$%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ['https://www.eiad.ma']
 
 HANDLER404 = 'pages.views.custom_404'
 
@@ -74,8 +76,10 @@ WSGI_APPLICATION = 'eiad_school.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.environ.get('DATABASE_PATH', BASE_DIR / 'db.sqlite3'),
     }
 }
 
