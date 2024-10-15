@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -79,7 +80,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': os.environ.get('DATABASE_PATH', BASE_DIR / 'db.sqlite3'),
+        'NAME': os.environ.get('DATABASE_PATH', BASE_DIR / 'db/db.sqlite3'),
     }
 }
 
@@ -106,14 +107,28 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# Set the default language to French
+
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
+# List of available languages
+LANGUAGES = [
+    ('fr', 'Français'),
+    ('en', 'English'),
+]
+
+# Define where the translations will be stored
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -144,4 +159,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'majidsakr86@gmail.com'
 EMAIL_HOST_PASSWORD = 'woyw ilce nibj ufde'
-ADMIN_EMAIL = 'majidsakr86@gmail.com'
+ADMIN_EMAIL = 'formationharouni@gmail.com'
